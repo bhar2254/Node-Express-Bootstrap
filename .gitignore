@@ -1,0 +1,11 @@
+# .gitignore
+
+# Ignore backup files
+*.bak
+
+# Ignore Yarn
+.yarn/*
+.yarn
+node_modules
+
+*.env
