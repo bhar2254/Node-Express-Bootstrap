@@ -7,5 +7,7 @@
 .yarn/*
 .yarn
 node_modules
+project-lock.json
+project.json
 
 *.env
