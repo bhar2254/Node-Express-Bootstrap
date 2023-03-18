@@ -1,3 +1,7 @@
+root {
+	--bs-gutter-y
+}
+
 @media (max-width: 990px)
 .bd-navbar {
     padding-right: 0.5rem;
