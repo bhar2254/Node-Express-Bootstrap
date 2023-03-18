@@ -11,6 +11,7 @@
 
 .navbar {
     --bs-navbar-padding-x: 0.5rem;
+}
 
 .row {
 	--bs-gutter-y:1.5;
