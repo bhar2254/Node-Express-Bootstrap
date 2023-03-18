@@ -22,3 +22,15 @@ mixin nav_header
 	li.dropdown-header
 		block
 //- End navbar mixins
+
+//- Page mixins
+
+mixin card(title, text, alt, href, src)
+	div.card( style="width:18rem;" )
+		img( src= src, class="card-img-top", alt= alt )
+		div.card-body
+			h5.card-title= title
+			p.card-text= text
+			a( class=["btn","btn-primary"], href= href )
+				block
+//- End page mixins
