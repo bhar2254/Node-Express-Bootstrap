@@ -1,11 +1,11 @@
 extends layout
 
 block content
-	div.container-fluid
+	div.container-fluid( style="text-align:center;" )
 		h1= title
 		p Welcome to #{title}
 		+row_container
-			div.col( style="text-align:center;" )
+			div.col
 				+card("Test Card","Test text","Favicon","/","res/favicon.png")
 			div.col
 				+card("Test Card","Test text","Favicon","/","res/favicon.png")
