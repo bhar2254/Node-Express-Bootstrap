@@ -2,7 +2,7 @@
 mixin nav(name, id)
 	header( class=["navbar", "fixed-top", "navbar-expand-lg", "navbar-dark"], style="background-color: var(--bs-purple);" )
 		a.navbar-brand(href="#")= name
-		button.navbar-toggler( type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")
+		button.navbar-toggler( type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="#" + id)
 				span.navbar-toggler-icon
 		.collapse.navbar-collapse( id=id )
 			ul.mr-auto.navbar-nav
