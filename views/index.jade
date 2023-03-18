@@ -4,13 +4,22 @@ block content
 	div.container-fluid( style="text-align:center;" )
 		h1= title
 		p Welcome to #{title}
+		h2= Babies
+		hr
 		+row_container
 			div.col
 				+card("Petitchi","Baby","Petitchi","/pet/baby/petitchi","/res/sprites/baby/petitchi/dynamic/general.png")
 			div.col
 				+card("Shiropetitchi","Baby","Shiropetitchi","/pet/baby/shiropetitchi","/res/sprites/baby/shiropetitchi/dynamic/general.png")
+		hr
+		h2= Children
+		hr
+		+row_container
 			div.col
 				+card("Marutchi","Child","Marutchi","/pet/child/marutchi","/res/sprites/child/marutchi/dynamic/general.png")
+		h2= Young Adults
+		hr
+		+row_container
 			div.col
 				+card("Hinotamatchi","Young","Hinotamatchi","/pet/young/hinotamatchi","/res/sprites/young/hinotamatchi/dynamic/general.png")
 			div.col
