@@ -1,6 +1,3 @@
-root {
-	--bs-gutter-y
-}
 
 @media (max-width: 990px)
 .bd-navbar {
@@ -14,4 +11,11 @@ root {
 
 .navbar {
     --bs-navbar-padding-x: 0.5rem;
+
+.row {
+	--bs-gutter-y:1.5;
+}
+
+.container {
+	--bs-gutter-y:1.5;
 }
