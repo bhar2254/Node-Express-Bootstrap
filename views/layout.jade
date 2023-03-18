@@ -17,10 +17,11 @@ body
 		+nav_item( "/", "active" ) Home  
 		+nav_item( "/pet" ) Pets  
 		+nav_item( "/pet/baby/" ) Baby 
-			+nav_item_dropdown "/pet/baby/petitchi" ) Petitchi
-			+nav_item_dropdown "/pet/baby/shiropetitchi" ) Shiropetitchi
-		+nav_item( "/pet/child/" ) Child
-			+nav_item_dropdown "/pet/baby/marutchi" ) Marutchi  
+		+nav_item_dropdown( "#" )( label="Child")
+			+nav_item( "/pet/baby/petitchi" ) Petitchi
+			+nav_item( "/pet/baby/shiropetitchi" ) Shiropetitchi
+			+nav_divider
+			+nav_item( "/pet/child/marutchi" ) Marutchi
 	br  
 	br  
 	br  
