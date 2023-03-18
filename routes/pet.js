@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 /* GET home page. */
 router.get('/baby/:babyName', function(req, res, next) {
-	res.render('index', { title: req.params.babyName });
+	res.render('baby', { title: req.params.babyName });
 });
 
 module.exports = router;

@@ -5,8 +5,9 @@ block content
 		h1= title
 		p Welcome to #{title}
 		+row_container
+		//- 
 			div.col
-				+card(title,"General 01",title,"/","res/" & title & "/general_01.png")
+				+card("title","General 01",title,"/","res/" & title & "/general_01.png")
 			div.col
 				+card(title,"General 02",title,"/","res/" & title & "/general_02.png")
 			div.col
