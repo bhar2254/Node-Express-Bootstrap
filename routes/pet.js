@@ -7,7 +7,6 @@ router.get('/', function(req, res, next) {
 });
 /* GET home page. */
 router.get('/baby/:babyName', function(req, res, next) {
-	console.log( req.params.babyName );
 	res.render('baby', { title: req.params.babyName });
 });
 
