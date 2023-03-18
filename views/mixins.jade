@@ -1,9 +1,8 @@
 //- Navbar mixins
 mixin nav(name, id)
 	nav( class=["navbar", "navbar-expand-lg", "navbar-dark", "bg-dark"] )
-		.navbar-header
-			a.navbar-brand(href="#")= name
-			button.navbar-toggler( type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")
+		a.navbar-brand(href="#")= name
+		button.navbar-toggler( type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")
 				span.navbar-toggler-icon
 		.collapse.navbar-collapse( id=id )
 			ul.nav.navbar-nav
