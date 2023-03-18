@@ -12,3 +12,7 @@
 .navbar {
     --bs-navbar-padding-x: 0.5rem;
 }
+
+.pixel {
+	image-rendering: pixelated;
+}
