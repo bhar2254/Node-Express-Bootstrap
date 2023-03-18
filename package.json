@@ -1,5 +1,5 @@
 {
-  "name": "node-express-bootstrap",
+  "name": "express-bootstrap",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -14,5 +14,17 @@
     "http-errors": "~1.6.3",
     "jade": "^0.29.0",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhar2254/node-express-bootstrap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhar2254/node-express-bootstrap/issues"
+  },
+  "homepage": "https://github.com/bhar2254/node-express-bootstrap#readme"
 }
