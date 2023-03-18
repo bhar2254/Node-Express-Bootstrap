@@ -16,7 +16,11 @@ body
 	+nav("Pet's App", "dropdown_menu","dark")  
 		+nav_item( "/", "active" ) Home  
 		+nav_item( "/pet" ) Pets  
-		+nav_item( "/pet/baby/petitchi" ) Petitchi Test  
+		+nav_item( "/pet/baby/" ) Baby 
+			+nav_item_dropdown "/pet/baby/petitchi" ) Petitchi
+			+nav_item_dropdown "/pet/baby/shiropetitchi" ) Shiropetitchi
+		+nav_item( "/pet/child/" ) Child
+			+nav_item_dropdown "/pet/baby/marutchi" ) Marutchi  
 	br  
 	br  
 	br  
