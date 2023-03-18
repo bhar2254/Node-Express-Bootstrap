@@ -16,3 +16,7 @@
 .pixel {
 	image-rendering: pixelated;
 }
+
+.caps {
+	text-transform: capitalize;
+}
