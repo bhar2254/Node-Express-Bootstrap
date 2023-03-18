@@ -33,4 +33,9 @@ mixin card(title, text, alt, href, src)
 			p.card-text= text
 			a( class=["btn","btn-primary"], href= href )= alt
 				block
+mixin row_container
+	div.container
+		div.row
+			block
+			
 //- End page mixins
