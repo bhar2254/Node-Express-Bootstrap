@@ -25,5 +25,3 @@ function resetMood(id, age, name){
 		);
 	}
 }
-
-resetMood("#petPNG", age, name);
