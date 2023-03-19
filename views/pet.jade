@@ -33,9 +33,15 @@ block content
 				div.btn-group
 					button.btn.btn-primary.dropdown-toggle( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Animation
 					div.dropdown-menu
-						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','general','"+age+"', '"+name+"')") General
 						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','sleeping','"+age+"', '"+name+"')") Sleeping
 						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','bath','"+age+"', '"+name+"')") Bath
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','eating','"+age+"', '"+name+"')") Eating
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','general','"+age+"', '"+name+"')") General
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','running','"+age+"', '"+name+"')") Running
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','sitting','"+age+"', '"+name+"')") Sitting
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','sleeping','"+age+"', '"+name+"')") Sleeping
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','surprise_good','"+age+"', '"+name+"')") Surprised (Good)
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','surprise_bad','"+age+"', '"+name+"')") Surprised (Bad)
 				block
 	script( src="/js/view_pet.js", type="text/javascript" )
 		
