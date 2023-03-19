@@ -2,14 +2,17 @@ extends layout
 
 block content
 	div.container-fluid( style="text-align:center;" )
-		h1.caps= title
+		h1.caps= name
 		br
 		div.card( style="width:18rem; margin:auto; text-align:center;" )
-			img( src= '/res/sprites/adult/mametchi/dynamic/general.png', class="card-img-top pixel rounded-0 border border-primary", style="max-width:10em;max-height:10em;margin:auto;margin-top:2.5em;background-color:#ababab;", id='petPNG' )
+			img( src= '/res/sprites/adult/'+name+'/dynamic/general.png', class="card-img-top pixel rounded-0 border border-primary", style="max-width:10em;max-height:10em;margin:auto;margin-top:2.5em;background-color:#ababab;", id='petPNG' )
 			div.card-body
 				h5.card-title.caps Mametchi
 				p.card-text Press the button for animation
-				a( class=["btn","btn-primary","caps"], href= '#', onclick="changeMood('#petPNG','sleeping','adult','mametchi')") Sleeping
-					block
+				ul
+					a( class=["btn","btn-primary","caps"], href= '#', onclick="changeMood('#petPNG','general','adult', '"+name+")") General
+					a( class=["btn","btn-primary","caps"], href= '#', onclick="changeMood('#petPNG','sleeping','adult', '"+name+")") Sleeping
+					a( class=["btn","btn-primary","caps"], href= '#', onclick="changeMood('#petPNG','bath','adult', '"+name+")") Bath
+				block
 	script( src="/js/view_pet.js", type="text/javascript" )
 		
