@@ -3,7 +3,8 @@ extends layout
 block content
 	div.container-fluid( style="text-align:center;" )
 		h1.caps= title
-		p Welcome to #{title}
+		p Welcome to 
+			span.caps #{title}
 		+row_container
 			div.col
 				+card("Eating","","/res/sprites/teen/" + title + "/dynamic/eating.png")
