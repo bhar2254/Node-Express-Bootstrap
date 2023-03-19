@@ -24,7 +24,3 @@ a.nav-item.nav-link {
 .caps {
 	text-transform: capitalize;
 }
-
-.dropdown-menu.show {
-	color: #303030;
-}
