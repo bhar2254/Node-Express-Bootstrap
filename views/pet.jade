@@ -1,6 +1,18 @@
 extends layout
 
 block content
+	div.container-fluid( style="text-align:center; margin:auto" )
+		div.btn-group
+			button.btn.btn-primary.dropdown-toggle( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Babies
+			div.dropdown-menu
+				a( class=["dropdown-item"], href= '/pet/?name=petitchi&age=baby' ) Petitchi
+				a( class=["dropdown-item"], href= '/pet/?name=shiropetitchi&age=baby' ) Shiropetitchi
+			button.btn.btn-primary.dropdown-toggle( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Children
+			div.dropdown-menu
+				a( class=["dropdown-item"], href= '/pet/?name=petitchi&age=baby' ) Petitchi
+				a( class=["dropdown-item"], href= '/pet/?name=shiropetitchi&age=baby' ) Shiropetitchi
+			
+			
 	div.container-fluid( style="text-align:center;" )
 		h1.caps= name
 		br
