@@ -5,7 +5,7 @@ mixin nav(name, id)
 		button.navbar-toggler( type="button", data-bs-toggle="collapse", data-bs-target="#" + id, aria-expanded="false", aria-controls=id, aria-label="Toggle navigation")
 				span.navbar-toggler-icon
 		.collapse.navbar-collapse( id=id )
-			ul.mr-auto.navbar-nav
+			ul.mr-auto.navbar-nav.nav
 				block
 mixin nav_item(href, active)
 	li(class="nav-item")
