@@ -4,24 +4,19 @@ block content
 	div.container-fluid( style="text-align:center;" )  
 		h1= title  
 		p Welcome to #{title}  
-		h2 Babies
-			div.container
-				+row_container  
-					div.col  
-						+card_link("Petitchi","Baby","Petitchi","/pet/baby/petitchi","/res/sprites/baby/petitchi/dynamic/sleeping.png")  
-					div.col  
-						+card_link("Shiropetitchi","Baby","Shiropetitchi","/pet/baby/shiropetitchi","/res/sprites/baby/shiropetitchi/dynamic/sleeping.png") 
-		h2 Children
-			div.container
-				+row_container   
-					div.col 
-						+card_link("Marutchi","Child","Marutchi","/pet/child/marutchi","/res/sprites/child/marutchi/dynamic/running.png")  
-					div.col  
-						+card_link("Marutchi","Child","Marutchi","/pet/child/marutchi","/res/sprites/child/marutchi/dynamic/eating.png")  
-		h2 Teens
-			div.container
-				+row_container   
-					div.col  
-						+card_link("Hinotamatchi","Teen","Hinotamatchi","/pet/teen/hinotamatchi","/res/sprites/teen/hinotamatchi/dynamic/bath.png")  
-					div.col  
-						+card_link("Young Mametchi","Teen","Young Mametchi","/pet/teen/mametchi","/res/sprites/teen/mametchi/dynamic/surprise_good.png")  
+		div.container
+			+row_container  
+				div.col  
+					+card_link("Petitchi","Baby","Petitchi","/pet/baby/petitchi","/res/sprites/baby/petitchi/dynamic/sleeping.png")  
+				div.col  
+					+card_link("Shiropetitchi","Baby","Shiropetitchi","/pet/baby/shiropetitchi","/res/sprites/baby/shiropetitchi/dynamic/sleeping.png") 
+			+row_container   
+				div.col 
+					+card_link("Marutchi","Child","Marutchi","/pet/child/marutchi","/res/sprites/child/marutchi/dynamic/running.png")  
+				div.col  
+					+card_link("Marutchi","Child","Marutchi","/pet/child/marutchi","/res/sprites/child/marutchi/dynamic/eating.png")  
+			+row_container   
+				div.col  
+					+card_link("Hinotamatchi","Teen","Hinotamatchi","/pet/teen/hinotamatchi","/res/sprites/teen/hinotamatchi/dynamic/bath.png")  
+				div.col  
+					+card_link("Young Mametchi","Teen","Young Mametchi","/pet/teen/mametchi","/res/sprites/teen/mametchi/dynamic/surprise_good.png")  
