@@ -3,9 +3,12 @@ extends layout
 block content
 	div.container-fluid( style="text-align:center;" )
 		h1.caps= title
-		div.container
-			+card_link("Mametchi","Adult","Sprites","/pet/baby/petitchi","/res/sprites/baby/petitchi/dynamic/sleeping.png")
-				br
+		div.card( style="width:18rem; text-align:center;" )
+			img( src= '/res/sprites/adult/mametchi/dynamic/general.png', class="card-img-top pixel rounded-0 border border-primary", style="max-width:10em;max-height:10em;margin:auto;margin-top:2.5em;background-color:#ababab;", id='petPNG' )
+			div.card-body
+				h5.card-title.caps Mametchi
+				p.card-text Press the button for animation
 				a( class=["btn","btn-primary","caps"], href= '#', onclick="changeMood('#petPNG','adult','mametchi','sleeping')") Sleeping
+					block
 	script( src="/js/view_pet.js", type="text/javascript" )
 		
