@@ -30,11 +30,11 @@ body {
 }
 
 .dropdown-item {
-	color: var(--bs-navbar-color);
+	color: var(--bs-navbar-color) !important;
 }
 
 .dropdown-item:hover {
-	color: var(--bs-navbar-hover-color);
+	color: var(--bs-navbar-hover-color) !important;
 }
 
 .pixel {
