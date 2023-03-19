@@ -14,7 +14,7 @@ mixin nav_item_dropdown(href, active)
 	li(class=["dropdown", "nav-item", active])
 		a.dropdown-toggle(class="dropdown-item", href=href, data-bs-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
 			span.caret
-		ul.dropdown-menu( role="menu",aira-labelledby=id )
+		ul.dropdown-menu( role="menu")
 			block
 mixin nav_divider
 	li.divider
