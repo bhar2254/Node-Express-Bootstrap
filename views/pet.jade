@@ -3,11 +3,23 @@ extends layout
 block content
 	div.container-fluid( style="text-align:center; margin:auto" )
 		div.btn-group
-			button.btn.btn-primary.dropdown-toggle( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Babies
+			button.btn.btn-primary.dropdown-toggle.rounded-left( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Babies
 			div.dropdown-menu
 				a( class=["dropdown-item"], href= '/pet/?name=petitchi&age=baby' ) Petitchi
 				a( class=["dropdown-item"], href= '/pet/?name=shiropetitchi&age=baby' ) Shiropetitchi
-			button.btn.btn-primary.dropdown-toggle( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Children
+			button.btn.btn-primary.dropdown-toggle.rounded-0( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Children
+			div.dropdown-menu
+				a( class=["dropdown-item"], href= '/pet/?name=petitchi&age=baby' ) Petitchi
+				a( class=["dropdown-item"], href= '/pet/?name=shiropetitchi&age=baby' ) Shiropetitchi
+			button.btn.btn-primary.dropdown-toggle.rounded-0( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Teen
+			div.dropdown-menu
+				a( class=["dropdown-item"], href= '/pet/?name=petitchi&age=baby' ) Petitchi
+				a( class=["dropdown-item"], href= '/pet/?name=shiropetitchi&age=baby' ) Shiropetitchi
+			button.btn.btn-primary.dropdown-toggle.rounded-0( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Adult
+			div.dropdown-menu
+				a( class=["dropdown-item"], href= '/pet/?name=petitchi&age=baby' ) Petitchi
+				a( class=["dropdown-item"], href= '/pet/?name=shiropetitchi&age=baby' ) Shiropetitchi
+			button.btn.btn-primary.dropdown-toggle.rounded-right( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Elder
 			div.dropdown-menu
 				a( class=["dropdown-item"], href= '/pet/?name=petitchi&age=baby' ) Petitchi
 				a( class=["dropdown-item"], href= '/pet/?name=shiropetitchi&age=baby' ) Shiropetitchi
@@ -17,7 +29,7 @@ block content
 		h1.caps= name
 		br
 		div.card( style="width:18rem; margin:auto; text-align:center;" )
-			img( src= '/res/sprites/adult/'+name+'/dynamic/general.png', class="card-img-top pixel rounded-0 border border-primary", style="max-width:10em;max-height:10em;margin:auto;margin-top:2.5em;background-color:#ababab;", id='petPNG' )
+			img( src= '/res/sprites/'+age+'/'+name+'/dynamic/general.png', class="card-img-top pixel rounded-0 border border-primary", style="max-width:10em;max-height:10em;margin:auto;margin-top:2.5em;background-color:#ababab;", id='petPNG' )
 			div.card-body
 				h5.card-title.caps= name
 				p.card-text Hover over your pet for a closeup view!
@@ -25,9 +37,9 @@ block content
 				div.btn-group
 					button.btn.btn-primary.dropdown-toggle( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Animation
 					div.dropdown-menu
-						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','general','adult', '"+name+"')") General
-						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','sleeping','adult', '"+name+"')") Sleeping
-						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','bath','adult', '"+name+"')") Bath
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','general','"+age+"', '"+name+"')") General
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','sleeping','"+age+"', '"+name+"')") Sleeping
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','bath','"+age+"', '"+name+"')") Bath
 				block
 	script( src="/js/view_pet.js", type="text/javascript" )
 		
