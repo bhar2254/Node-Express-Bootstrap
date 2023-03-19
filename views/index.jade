@@ -4,12 +4,12 @@ block content
 	div.container-fluid( style="text-align:center;" )  
 		h1= title  
 		p Welcome to #{title}  
-		div.container( style="text-align:right;" )
+		div.container( style="text-align:left;" )
 			br
 			h3 Babies
 			hr
 			br
-			+row_container  
+			+row_container( style="text-align:center;" )
 				div.col  
 					+card_link("Petitchi","Baby","Stats","/pet/baby/petitchi","/res/sprites/baby/petitchi/dynamic/sleeping.png")  
 				div.col  
