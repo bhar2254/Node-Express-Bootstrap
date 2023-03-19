@@ -8,8 +8,8 @@ mixin nav(name, id)
 			ul.nav.navbar-nav
 				block
 mixin nav_item(href, active)
-	li(class=["nav-item"], style="margin:auto;" )
-		a(class=["nav-link", active], href=href )
+	li(class=["nav-item"] )
+		a(class=["nav-link", active], href=href, style="margin:auto;" )
 			block
 mixin nav_item_dropdown(href, active)
 	li(class=["dropdown", "nav-item", active])
