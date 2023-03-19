@@ -3,11 +3,9 @@ extends layout
 block content
 	div.container-fluid( style="text-align:center;" )
 		h1.caps= title
-		p Welcome to 
+		p Here are the sprites available for  
 			span.caps #{title}
-			. Here are the sprites available for  
-			span.caps #{title}
-			.  
+			. Animated sprites are displayed first.
 		+row_container
 			div.col
 				+card("Eating","","/res/sprites/baby/" + title + "/dynamic/eating.png")
