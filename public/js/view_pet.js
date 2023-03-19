@@ -1,6 +1,11 @@
 
 function changeMood(id, mood, age, name){
 	$(id).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/'+mood+'.png');
+}
+
+function resetMood(id, age, name){
+	$(id).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/general.png');
+	
 	if(age==='adult')
 	{
 		$(id).hover(
@@ -19,8 +24,4 @@ function changeMood(id, mood, age, name){
 			}
 		);
 	}
-}
-
-function resetMood(id, age, name){
-	$(id).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/general.png');
 }
