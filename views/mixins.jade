@@ -1,25 +1,22 @@
 //- Navbar mixins
 mixin nav(name, id)
-	nav( role="navigation", class=["navbar", "navbar-dark", "bd-navbar", "fixed-top"] )
-		.div.container-fluid	
-			.navbar-header
-				button.navbar-toggle.collapsed( type="button", data-bs-toggle="collapse", data-bs-target="#" + id, aria-expanded="false", aria-controls="navbar")
-					span.sr-only Toggle navigation
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-				a.navbar-brand(href="#")= name
-			.collapse.navbar-collapse( id=id )
-				ul.nav.navbar-nav
-					block
+	nav( class=["navbar", "navbar-default"] )
+		.navbar-header
+			button.navbar-toggler( type="button", data-bs-toggle="collapse", data-bs-target="#" + id, aria-expanded="false", aria-controls=id, aria-label="Toggle navigation")
+				span.navbar-toggler-icon
+			a.navbar-brand(href="#")= name
+		.collapse.navbar-collapse( id=id )
+			ul.nav.navbar-nav.mr-auto
+				block
 mixin nav_item(href, active)
-	li(class=active): a( href=href )
-		block
+	li(class="nav-item")
+		a(class=["nav-link", active], href=href )
+			block
 mixin nav_item_dropdown(href, active)
-	li(class=["dropdown", active])
-		a.dropdown-toggle( href=href, data-bs-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
+	li(class=["dropdown", "nav-item", active])
+		a.dropdown-toggle(class="dropdown-item", href=href, data-bs-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
 			span.caret
-		ul.dropdown-menu( role="menu" )
+		ul.dropdown-menu( role="menu")
 			block
 mixin nav_divider
 	li.divider
