@@ -32,6 +32,15 @@ mixin card(title, text, alt, href, src)
 			h5.card-title.caps= title
 			p.card-text= text
 				block
+
+mixin card_link(title, text, alt, href, src)
+	div.card( style="width:18rem;" )
+		img( src= src, class="card-img-top pixel", alt= alt, style="max-width:10em;max-height:10em;margin:auto;padding:1em;" )
+		div.card-body
+			h5.card-title.caps= title
+			p.card-text= text
+			a( class=["btn","btn-primary","caps"], href= href )= alt
+				block
 mixin row_container
 	div.container
 		div.row.g-4
