@@ -3,29 +3,15 @@ extends layout
 block content
 	div.container-fluid( style="text-align:center; margin:auto" )
 		div.btn-group
-			button.btn.btn-primary.dropdown-toggle.rounded-left(  id="dropdownMenuButtonBaby", type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Babies
-				div.dropdown-menu
-					a( class=["dropdown-item"], href= '/pet?name=petitchi&age=baby' ) Petitchi
-					a( class=["dropdown-item"], href= '/pet?name=shiropetitchi&age=baby' ) Shiropetitchi
-		div.btn-group
-			button.btn.btn-primary.dropdown-toggle.rounded-0( id="dropdownMenuButtonChild", type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Children
-				div.dropdown-menu
-					a( class=["dropdown-item"], href= '/pet?name=kinakomotchi&age=child' ) Kinakomotchi
-					a( class=["dropdown-item"], href= '/pet?name=hitodetchi&age=child' ) Hitodetchi
-					a( class=["dropdown-item"], href= '/pet?name=kuribotchi&age=child' ) Kuribotchi
-					a( class=["dropdown-item"], href= '/pet?name=marutchi&age=child' ) Marutchi
-		div.btn-group
-			button.btn.btn-primary.dropdown-toggle.rounded-0( id="dropdownMenuButtonTeen", type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Teen
-				div.dropdown-menu
-					a( class=["dropdown-item"], href= '/pet/?name=hinotamatchi&age=teen' ) Hinotamatchi
-					a( class=["dropdown-item"], href= '/pet/?name=mametchi&age=teen' ) Mametchi
-		div.btn-group
-			button.btn.btn-primary.dropdown-toggle.rounded-0( id="dropdownMenuButtonAdult", type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Adult
-				div.dropdown-menu
-					a( class=["dropdown-item"], href= '/pet/?name=mametchi&age=adult' ) Mametchi
-		div.btn-group
-			button.btn.btn-primary.dropdown-toggle.rounded-right( id="dropdownMenuButtonElder", type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Elder
-				div.dropdown-menu
+			a( class=["dropdown-item"], href= '/pet?name=petitchi&age=baby' ) Petitchi
+			a( class=["dropdown-item"], href= '/pet?name=shiropetitchi&age=baby' ) Shiropetitchi
+			a( class=["dropdown-item"], href= '/pet?name=kinakomotchi&age=child' ) Kinakomotchi
+			a( class=["dropdown-item"], href= '/pet?name=hitodetchi&age=child' ) Hitodetchi
+			a( class=["dropdown-item"], href= '/pet?name=kuribotchi&age=child' ) Kuribotchi
+			a( class=["dropdown-item"], href= '/pet?name=marutchi&age=child' ) Marutchi
+			a( class=["dropdown-item"], href= '/pet/?name=hinotamatchi&age=teen' ) Hinotamatchi
+			a( class=["dropdown-item"], href= '/pet/?name=mametchi&age=teen' ) Mametchi
+			a( class=["dropdown-item"], href= '/pet/?name=mametchi&age=adult' ) Mametchi
 	br
 	br
 	div.container-fluid( style="text-align:center;" )
