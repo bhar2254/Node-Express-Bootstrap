@@ -4,7 +4,8 @@ block content
 	div.container-fluid( style="text-align:center;" )
 		h1.caps= title
 		div.container
-			+card_link("Mametchi","Adult","Sprites","/pet/baby/petitchi","/res/sprites/baby/petitchi/dynamic/sleeping.png")  
+			+card_link("Mametchi","Adult","Sprites","/pet/baby/petitchi","/res/sprites/baby/petitchi/dynamic/sleeping.png")
+				br
 				a( class=["btn","btn-primary","caps"], href= '#', onclick="changeMood('#petPNG','adult','mametchi','sleeping')") Sleeping
 	script( src="/js/view_pet.js", type="text/javascript" )
 		
