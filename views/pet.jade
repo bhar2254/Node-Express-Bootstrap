@@ -7,12 +7,14 @@ block content
 		div.card( style="width:18rem; margin:auto; text-align:center;" )
 			img( src= '/res/sprites/adult/'+name+'/dynamic/general.png', class="card-img-top pixel rounded-0 border border-primary", style="max-width:10em;max-height:10em;margin:auto;margin-top:2.5em;background-color:#ababab;", id='petPNG' )
 			div.card-body
-				h5.card-title.caps Mametchi
+				h5.card-title.caps name
 				p.card-text Press the button for animation
-				ul
-					a( class=["btn","btn-primary","caps"], href= '#', onclick="changeMood('#petPNG','general','adult', '"+name+"')") General
-					a( class=["btn","btn-primary","caps"], href= '#', onclick="changeMood('#petPNG','sleeping','adult', '"+name+"')") Sleeping
-					a( class=["btn","btn-primary","caps"], href= '#', onclick="changeMood('#petPNG','bath','adult', '"+name+"')") Bath
+				div.btn-group
+					button.btn.btn-primary.dropdown-toggle( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Action
+					div.dropdown-menu
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','general','adult', '"+name+"')") General
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','sleeping','adult', '"+name+"')") Sleeping
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','bath','adult', '"+name+"')") Bath
 				block
 	script( src="/js/view_pet.js", type="text/javascript" )
 		
