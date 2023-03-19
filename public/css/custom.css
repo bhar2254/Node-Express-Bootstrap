@@ -29,7 +29,11 @@ body {
 }
 
 .dropdown-item {
-	color: #303030;
+	color: var(--bs-navbar-color);
+}
+
+.dropdown-item:hover {
+	color: var(--bs-navbar-hover-color);
 }
 
 .pixel {
