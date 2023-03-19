@@ -8,8 +8,9 @@ mixin nav(name, id)
 			ul.mr-auto.navbar-nav
 				block
 mixin nav_item(href, active)
-	a(class=["nav-item", "nav-link", active], href=href )
-		block
+	li(class="nav-item")
+		a(class=["nav-link", active], href=href )
+			block
 mixin nav_item_dropdown(href, active)
 	li(class=["dropdown", "nav-item", active])
 		a.dropdown-toggle(class="dropdown-item", href=href, data-bs-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
