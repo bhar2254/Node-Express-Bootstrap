@@ -8,11 +8,11 @@ mixin nav(name, id)
 			ul.nav.navbar-nav
 				block
 mixin nav_item(href, active)
-	li(class=["nav-item"] )
-		a(class=["nav-link", active], href=href, style="margin:auto;" )
+	li(class=["nav-item"])
+		a( class=["nav-link", active], href=href )
 			block
 mixin nav_item_dropdown(href, active)
-	li(class=["dropdown", "nav-item", active])
+	li(class=["dropdown", "nav-item", active], style="margin:auto;" )
 		a.dropdown-toggle(class="dropdown-item", href=href, data-bs-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
 			span.caret
 		ul.dropdown-menu( role="menu")
