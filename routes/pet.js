@@ -16,9 +16,9 @@ router.get('/child/:childName', function(req, res, next) {
 	res.render('child', { title: req.params.childName });
 });
 
-/* GET young adult page. */
-router.get('/young/:youngName', function(req, res, next) {
-	res.render('young', { title: req.params.youngName });
+/* GET teen adult page. */
+router.get('/teen/:teenName', function(req, res, next) {
+	res.render('teen', { title: req.params.teenName });
 });
 
 /* GET adult page. */
