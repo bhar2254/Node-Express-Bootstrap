@@ -2,7 +2,7 @@ extends layout
 
 block content
 	div.container-fluid( style="text-align:center; margin:auto" )
-		+nav("Petify", "dropdown_menu","dark")  
+		+nav("Pets", "dropdown_pets","dark")  
 			+nav_item( "/", "active" ) Home  
 			+nav_item( "/pet", "" ) Pet  
 			+nav_item_dropdown( "#" )( label="Baby" )
