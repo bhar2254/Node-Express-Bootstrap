@@ -20,13 +20,16 @@ body {
   margin: auto;
 }
 
-
-.dropdown-item {
-	color: #303030;
+.dropdown-menu {
+    --bs-dropdown-bg: #505050;
 }
 
 .navbar {
     --bs-navbar-padding-x: 0.5rem;
+}
+
+.dropdown-item {
+	color: #303030;
 }
 
 .pixel {
@@ -35,8 +38,4 @@ body {
 
 .caps {
 	text-transform: capitalize;
-}
-
-.dropdown-menu {
-    --bs-dropdown-bg: #505050;
 }
