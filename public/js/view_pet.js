@@ -2,9 +2,9 @@
 function changeMood(id, mood, age, name){
 	$(id).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/'+mood+'.png');
 
-	$( "#petPNG" ).hover(
+	$(id).hover(
 		function() {
-			$( this ).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/'+mood+'.png');
+			$( this ).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/close_up.png');
 		}, function() {
 			$( this ).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/general.png');
 		}
