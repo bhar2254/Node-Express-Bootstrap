@@ -1,4 +1,5 @@
 //- Navbar mixins
+
 mixin nav(name, id)
 	nav( class=["navbar", "fixed-top", "navbar-expand-lg", "navbar-dark", "bd-navbar", "rounded-bottom"] )
 		a.navbar-brand(href="#")= name
@@ -22,6 +23,7 @@ mixin nav_divider
 mixin nav_header
 	li.dropdown-header
 		block
+		
 //- End navbar mixins
 
 //- Page mixins
@@ -33,7 +35,6 @@ mixin card(title, text, src)
 			h5.card-title.caps= title
 			p.card-text= text
 				block
-
 mixin card_link(title, text, alt, href, src)
 	div.card( style="width:18rem; text-align:center;" )
 		img( src= src, class="card-img-top pixel", alt= alt, style="max-width:10em;max-height:10em;margin:auto;padding:1em;" )
@@ -48,3 +49,14 @@ mixin row_container
 			block
 			
 //- End page mixins
+
+//- Footer mixins
+
+mixin footer
+	footer.py-3.my-4
+		ul.nav.justify-content-center.border-bottom.pb-3.mb-3
+			li.nav-item
+				a.nav-link.px-2.text-muted Home
+		p.text-center.text-muted Blaine Harper © 2022 Company, Inc
+		
+//-
