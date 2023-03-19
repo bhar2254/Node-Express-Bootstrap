@@ -2,8 +2,8 @@
 
 mixin nav(name, id)
 	nav( class=["navbar", "fixed-top", "navbar-expand-lg", "navbar-dark", "bd-navbar", "rounded-bottom"] )
+		a.navbar-brand(href="#")= name
 		div( style="margin:auto;" )
-			a.navbar-brand(href="#")= name
 			button.navbar-toggler( type="button", data-bs-toggle="collapse", data-bs-target="#" + id, aria-expanded="false", aria-controls=id, aria-label="Toggle navigation")
 					span.navbar-toggler-icon
 			.collapse.navbar-collapse( id=id )
