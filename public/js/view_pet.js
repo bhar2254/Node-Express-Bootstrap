@@ -1,6 +1,25 @@
 
 function changeMood(id, mood, age, name){
 	$(id).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/'+mood+'.png');
+	
+	if(age==='adult')
+	{
+		$(id).hover(
+			function() {
+				$( this ).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/close_up.png');
+			}, function() {
+				$(id).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/'+mood+'.png');
+			}
+		);
+	} else {
+		$(id).hover(
+			function() {
+				$( this ).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/surprise_good.png');
+			}, function() {
+				$(id).attr('src','/res/sprites/'+age+'/'+name+'/dynamic/'+mood+'.png');
+			}
+		);
+	}
 }
 
 function resetMood(id, age, name){
