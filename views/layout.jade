@@ -14,18 +14,18 @@ html
 	<script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
 	
 body
-	+nav("Project name", "dropdown_menu")
-		+nav_item( "index.html", "active" ) Home
-		+nav_item( "about.html" ) About
-		+nav_item( "contact.html" ) Contact
-		+nav_item_dropdown( "#" )( label="Dropdown")
-			+nav_item( "#" ) Action
-			+nav_item( "#" ) Another action
-			+nav_item( "#" ) Something else here
+	+nav("Pet's App", "dropdown_menu","dark")  
+		+nav_item( "/", "active" ) Home  
+		+nav_item( "/pet" ) Pets  
+		+nav_item( "/pet/baby/" ) Baby 
+		+nav_item_dropdown( "#" )( label="Child" )
+			+nav_item( "/pet/baby/petitchi" ) Petitchi
+			+nav_item( "/pet/baby/shiropetitchi" ) Shiropetitchi
 			+nav_divider
-			+nav_header Nav header
-			+nav_item( "#" ) Separated link
-			+nav_item( "#" ) One more separated link
+			+nav_item( "/pet/child/marutchi" ) Marutchi
+			+nav_divider
+			+nav_item( "/pet/teen/hinotamatchi" ) Hinotamatchi
+			+nav_item( "/pet/teen/mametchi" ) Young Mametchi
 	br  
 	br  
 	br  

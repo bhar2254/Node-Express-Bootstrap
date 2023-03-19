@@ -2,7 +2,7 @@
 mixin nav(name, id)
 	nav( class=["navbar", "fixed-top", "navbar-expand-lg", "navbar-dark", "bd-navbar"] )
 		a.navbar-brand(href="#")= name
-		button.navbar-toggler( type="button", data-bs-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls=id, aria-label="Toggle navigation")
+		button.navbar-toggler( type="button", data-bs-toggle="collapse", data-bs-target="#" + id, aria-expanded="false", aria-controls=id, aria-label="Toggle navigation")
 				span.navbar-toggler-icon
 		.collapse.navbar-collapse( id=id )
 			ul.mr-auto.navbar-nav
@@ -14,7 +14,7 @@ mixin nav_item_dropdown(href, active)
 	li(class=["dropdown", "nav-item", active])
 		a.dropdown-toggle(class="dropdown-item", href=href, data-bs-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
 			span.caret
-		div.dropdown-menu( role="menu")
+		div.dropdown-menu( role="menu" )
 			block
 mixin nav_divider
 	li.divider
