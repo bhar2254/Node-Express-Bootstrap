@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	div.container-fluid( style="text-align:center;" )
+		h1.caps= title
+		canvas( id="petCanvas" )
+			img( id="petPNG", src="/res/sprites/adult/mametchi/dynamic/general.png" )
+		button( onclick="changeMood('#petPNG','adult','mametchi','sleeping')" ) Sleeping
+	script( src="/js/view_pet.js", type="text/javascript" )
+		
