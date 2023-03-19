@@ -2,7 +2,7 @@
 mixin nav(name, id)
 	nav( role="navigation", class=["navbar", "navbar-dark", "bd-navbar", "fixed-top"] )
 		.navbar-header
-			button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#" + id, aria-expanded="false", aria-controls="navbar")
+			button.navbar-toggle.collapsed( type="button", data-bs-toggle="collapse", data-bs-target="#" + id, aria-expanded="false", aria-controls="navbar")
 				span.sr-only Toggle navigation
 				span.icon-bar
 				span.icon-bar
@@ -15,8 +15,8 @@ mixin nav_item(href, active)
 	li(class=active): a( href=href )
 		block
 mixin nav_item_dropdown(href, active)
-    li(class=["dropdown", active])
-		a.dropdown-toggle( href=href, data-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
+	li(class=["dropdown", active])
+		a.dropdown-toggle( href=href, data-bs-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
 			span.caret
 		ul.dropdown-menu( role="menu" )
 			block
