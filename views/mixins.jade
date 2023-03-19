@@ -8,7 +8,7 @@ mixin nav(name, id)
 			ul.mr-auto.navbar-nav
 				block
 mixin nav_item(href, active)
-	a(class=["nav-item", "nav-link", active], style="color: #303030;", href=href )
+	a(class=["nav-item", "nav-link", active], href=href )
 		block
 mixin nav_item_dropdown(href, active)
 	li(class=["dropdown", "nav-item", active])
