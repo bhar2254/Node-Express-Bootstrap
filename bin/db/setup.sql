@@ -4,7 +4,7 @@ USE pets;
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE users (
-	id int,
+	id int NOT NULL AUTO_INCREMENT,
 	username varchar(255),
 	password varchar(255),
 	displayName varchar(255),
