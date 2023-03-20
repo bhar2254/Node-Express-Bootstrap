@@ -21,6 +21,28 @@ router.post('/login', function(req, res, next) {
 	let password = req.body.password;
 	res.send(`Username: ${username} Password: ${password}`);
 
+	if (username && password) {
+		// Execute SQL query that'll select the account from the database based on the specified username and password
+		DATABASE.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
+			// If there is an issue with the query, output the error
+			if (error) throw error;
+			// If the account exists
+			if (results.length > 0) {
+				// Authenticate the user
+				request.session.loggedin = true;
+				request.session.username = username;
+				// Redirect to home page
+				response.redirect('/home');
+			} else {
+				response.send('Incorrect Username and/or Password!');
+			}			
+			response.end();
+		});
+	} else {
+		response.send('Please enter Username and Password!');
+		response.end();
+	}
+
     // Find user with requested email 
     User.findOne({ email : req.body.email }, function(err, user) { 
         if (user === null) { 
