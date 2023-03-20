@@ -11,3 +11,4 @@ project-lock.json
 project.json
 
 *.env
+env.*
