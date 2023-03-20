@@ -48,31 +48,31 @@ function resetMood(id, age, name){
 function changeStatus(id, status){
 	switch(status) {
 		case 'primary':
-			$(id).removeClass( "border-secondary border-success border-danger border-warning border-info border-light border-dark border-white" ).addClass( "border-primary" );
+			$(id).removeClass( "border-secondary border-success border-danger border-warning border-info border-light border-dark border-white border-4 border-2" ).addClass( "border-primary border-1" );
 			break;
 		case 'secondary':
-			$(id).removeClass( "border-primary border-success border-danger border-warning border-info border-light border-dark border-white" ).addClass( "border-secondary" );
+			$(id).removeClass( "border-primary border-success border-danger border-warning border-info border-light border-dark border-white border-4 border-1" ).addClass( "border-secondary border-2" );
 			break;
 		case 'success':
-			$(id).removeClass( "border-secondary border-primary border-danger border-warning border-info border-light border-dark border-white" ).addClass( "border-success" );
+			$(id).removeClass( "border-secondary border-primary border-danger border-warning border-info border-light border-dark border-white border-4 border-1" ).addClass( "border-success border-4" );
 			break;
 		case 'danger':
-			$(id).removeClass( "border-secondary border-success border-primary border-warning border-info border-light border-dark border-white" ).addClass( "border-danger" );
+			$(id).removeClass( "border-secondary border-success border-primary border-warning border-info border-light border-dark border-white border-4 border-1" ).addClass( "border-danger border-4" );
 			break;
 		case 'warning':
-			$(id).removeClass( "border-secondary border-success border-danger border-primary border-info border-light border-dark border-white" ).addClass( "border-warning" );
+			$(id).removeClass( "border-secondary border-success border-danger border-primary border-info border-light border-dark border-white border-4 border-1" ).addClass( "border-warning border-2" );
 			break;
 		case 'info':
-			$(id).removeClass( "border-secondary border-success border-danger border-warning border-primary border-light border-dark border-white" ).addClass( "border-info" );
+			$(id).removeClass( "border-secondary border-success border-danger border-warning border-primary border-light border-dark border-white border-4 border-1" ).addClass( "border-info border-2" );
 			break;
 		case 'light':
-			$(id).removeClass( "border-secondary border-success border-danger border-warning border-info border-primary border-dark border-white" ).addClass( "border-light" );
+			$(id).removeClass( "border-secondary border-success border-danger border-warning border-info border-primary border-dark border-white border-4 border-1" ).addClass( "border-light border-2" );
 			break;
 		case 'dark':
-			$(id).removeClass( "border-secondary border-success border-danger border-warning border-info border-light border-primary border-white" ).addClass( "border-dark" );
+			$(id).removeClass( "border-secondary border-success border-danger border-warning border-info border-light border-primary border-white border-4 border-1" ).addClass( "border-dark border-2" );
 			break;
 		case 'white':
-			$(id).removeClass( "border-secondary border-success border-danger border-warning border-info border-light border-dark border-primary" ).addClass( "border-white" );
+			$(id).removeClass( "border-secondary border-success border-danger border-warning border-info border-light border-dark border-primary border-4 border-1" ).addClass( "border-white border-2" );
 	}
 }
 
