@@ -4,8 +4,11 @@ block content
 	div.container-fluid( style="text-align:center;" )
 		h1.caps= title
 		p Here are the sprites available for  
-			span.caps #{title}
-			. Animated sprites are displayed first.
+			span.caps #{title}.  
+			span Animated sprites are displayed first. If you would like to pet  
+			span.caps #{title} 
+			span head to 
+			+goto_pet_button("/pet?name="+title+"&age=adult")
 		+row_container
 			div.col
 				+card("Angry","","/res/sprites/adult/" + title + "/dynamic/angry.png")
