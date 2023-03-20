@@ -45,7 +45,7 @@ function resetMood(id, age, name){
 	}
 }
 
-function changeMood(id, status){
+function changeStatus(id, status){
 	switch(status) {
 		case 'primary':
 			$(id).removeClass( "border-secondary border-success border-danger border-warning border-info border-light border-dark border-white" ).addClass( "border-primary" );
