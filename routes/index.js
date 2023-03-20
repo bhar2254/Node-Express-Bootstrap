@@ -74,7 +74,7 @@ router.post('/signup', (req, res, next) => {
 			if (results.length > 0) {
 				res.send('Account Already Exists!');
 			} else {
-				DATABASE.query('INSERT INTO users (username, password, mail, phone) VALUES (?,?,?,?)', [username, password, email, phone], function(error, results, fields) {
+				DATABASE.query('INSERT INTO users (username, password, mail, phone) VALUES (?,?,?,?)', [username, password, email, phone], function(error, results, fields)) {
 					// If there is an issue with the query, output the error
 					if (error) throw error;
 					
