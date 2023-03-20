@@ -1,9 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-// Importing User Schema 
-const User = require('../public/js/user'); 
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Petify' });
