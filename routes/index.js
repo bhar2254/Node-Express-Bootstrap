@@ -80,8 +80,9 @@ router.post('/signup', (req, res, next) => {
 					
 					// Redirect to home page
 					res.redirect('/login');
-				});
-			}		
+					res.end();
+				}
+			});		
 			res.end();
 		});
 	} else {
