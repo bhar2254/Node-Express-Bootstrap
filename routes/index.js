@@ -8,14 +8,14 @@ router.get('/', function(req, res, next) {
 
 router.get('/home', function(request, response) {
 	// If the user is loggedin
-	if (request.session.loggedin) {
+	if (req.session.loggedin) {
 		// Output username
-		response.send('Welcome back, ' + request.session.username + '!');
+		res.send('Welcome back, ' + req.session.username + '!');
 	} else {
 		// Not logged in
-		response.send('Please login to view this page!');
+		res.send('Please login to view this page!');
 	}
-	response.end();
+	res.end();
 });
 
 /* GET login page. */
@@ -37,18 +37,18 @@ router.post('/login', function(req, res, next) {
 			// If the account exists
 			if (results.length > 0) {
 				// Authenticate the user
-				request.session.loggedin = true;
-				request.session.username = username;
+				req.session.loggedin = true;
+				req.session.username = username;
 				// Redirect to home page
-				response.redirect('/home');
+				res.redirect('/home');
 			} else {
-				response.send('Incorrect Username and/or Password!');
+				res.send('Incorrect Username and/or Password!');
 			}			
-			response.end();
+			res.end();
 		});
 	} else {
-		response.send('Please enter Username and Password!');
-		response.end();
+		res.send('Please enter Username and Password!');
+		res.end();
 	}
 });
 
