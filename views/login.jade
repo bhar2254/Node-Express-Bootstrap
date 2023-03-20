@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	form( action="//pets.blaineharper.com/login" method="post" )
+	form( action="//pets.blaineharper.com/login", method="post" )
 		div.form-group
 			label( for="username" ) Username
 			input( name="username", type="text", placeholder="Username", required )
@@ -12,5 +12,5 @@ block content
 			input( name="password", type="text", placeholder="Password", required )
 			br
 			br
-			input( type="submit" value="login" )
+			input( type="submit", value="login" )
 		
