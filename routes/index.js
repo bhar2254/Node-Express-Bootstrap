@@ -9,6 +9,18 @@ router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Petify' });
 });
 
+router.get('/home', function(request, response) {
+	// If the user is loggedin
+	if (request.session.loggedin) {
+		// Output username
+		response.send('Welcome back, ' + request.session.username + '!');
+	} else {
+		// Not logged in
+		response.send('Please login to view this page!');
+	}
+	response.end();
+});
+
 /* GET login page. */
 router.get('/login', function(req, res, next) {
 	res.render('login', { title: 'Login' });
@@ -42,27 +54,6 @@ router.post('/login', function(req, res, next) {
 		response.send('Please enter Username and Password!');
 		response.end();
 	}
-
-    // Find user with requested email 
-    User.findOne({ email : req.body.email }, function(err, user) { 
-        if (user === null) { 
-            return res.status(400).send({ 
-                message : "User not found."
-            }); 
-        } 
-        else { 
-            if (user.validPassword(req.body.password)) { 
-                return res.status(201).send({ 
-                    message : "User Logged In", 
-                }) 
-            } 
-            else { 
-                return res.status(400).send({ 
-                    message : "Wrong Password"
-                }); 
-            } 
-        } 
-    }); 
 });
 
 /* GET login page. */
