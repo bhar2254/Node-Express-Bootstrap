@@ -46,3 +46,7 @@ body {
 .caps {
 	text-transform: capitalize;
 }
+
+.footer-text {
+	color: #303030;
+}
