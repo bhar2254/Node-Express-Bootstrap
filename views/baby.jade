@@ -8,7 +8,7 @@ block content
 			span Animated sprites are displayed first. If you would like to pet  
 			span.caps #{title} 
 			span head to 
-			+goto_pet_button("/pet?name=petitchi&age=baby")
+			+goto_pet_button("/pet?name="+name+"&age=baby")
 		+row_container
 			div.col
 				+card("Eating","","/res/sprites/baby/" + title + "/dynamic/eating.png")
