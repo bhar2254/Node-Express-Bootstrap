@@ -5,6 +5,8 @@ USE pets;
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE users (
 	id int,
+	username varchar(255),
+	password varchar(255),
 	displayName varchar(255),
 	givenName varchar(255),
 	surname varchar(255),
