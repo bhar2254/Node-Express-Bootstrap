@@ -28,7 +28,6 @@ CREATE TABLE pet_stats (
 	hunger int,
 	thirst int,
 	exhaust int,
-	weight int,
 	fav_food int,
 	dis_food int,
 	gender int,
