@@ -15,7 +15,7 @@ CREATE TABLE users (
 	update_id int,
 	update_displayName varchar(255),
 	PRIMARY KEY (id, mail)
-)
+);
 
 DROP TABLE IF EXISTS `pet_stats`;
 CREATE TABLE pet_stats (
@@ -34,11 +34,11 @@ CREATE TABLE pet_stats (
 	evo_cond JSON,
 	animations JSON,
 	PRIMARY KEY (id)
-)
+);
 
 DROP TABLE IF EXISTS `user_pets`;
 CREATE TABLE user_pets (
 	id int,
 	owner_id int,
 	PRIMARY KEY (id)
-)
+);
