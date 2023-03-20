@@ -21,6 +21,7 @@ DROP TABLE IF EXISTS `pet_stats`;
 CREATE TABLE pet_stats (
 	id int,
 	name varchar(255),
+	description varchar(255),
 	hp int,
 	weight int,
 	height int,
@@ -32,6 +33,7 @@ CREATE TABLE pet_stats (
 	dis_food int,
 	gender int,
 	evo_cond JSON,
+	animations JSON,
 	PRIMARY KEY (id)
 )	ENGINE=INNODB;
 
