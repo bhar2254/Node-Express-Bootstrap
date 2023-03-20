@@ -75,6 +75,12 @@ router.post('/signup', (req, res, next) => {
 				res.send('Account Already Exists!');
 			} else {
 				DATABASE.query('INSERT INTO users (username, password, mail, phone) VALUES (?,?,?,?)', [username, password, email, phone], function(error, results, fields) {
+					// If there is an issue with the query, output the error
+					if (error) throw error;
+					
+					// Redirect to home page
+					res.redirect('/login');
+				}
 			}			
 			res.end();
 		});
