@@ -28,7 +28,6 @@ router.post('/login', function(req, res, next) {
 	// Insert Login Code Here
 	let username = req.body.username;
 	let password = req.body.password;
-	res.send(`Username: ${username} Password: ${password}`);
 
 	if (username && password) {
 		// Execute SQL query that'll select the account from the database based on the specified username and password
