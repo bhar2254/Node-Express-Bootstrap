@@ -65,6 +65,7 @@ function changeMood(id, status){
 			$(id).removeClass( "border-secondary border-success border-danger border-warning border-info border-light border-primary border-white" ).addClass( "border-dark" );
 		case 'white':
 			$(id).removeClass( "border-secondary border-success border-danger border-warning border-info border-light border-dark border-primary" ).addClass( "border-white" );
+	}
 }
 
 function resetStatus(id){
