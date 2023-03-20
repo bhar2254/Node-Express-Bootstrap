@@ -36,6 +36,9 @@ router.post('/login', function(req, res, next) {
 			if (error) throw error;
 			// If the account exists
 			if (results.length > 0) {
+				// Authenticate the user
+				req.session.loggedin = true;
+				req.session.username = username;
 				// Redirect to home page
 				res.redirect('/home');
 			} else {
