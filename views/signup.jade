@@ -1,0 +1,28 @@
+extends layout
+
+block content
+	div.card( class="text-center", style="max-width:25em; margin:auto;" )
+		form( action="//pets.blaineharper.com/signup", method="post")
+			div.card-body
+				br
+				div.form-group
+					input.form-control( name="username", type="text", placeholder="Username", required )
+					br
+					br
+				div.form-group
+					input.form-control( name="password", type="password", placeholder="Password", required )
+					br
+					br
+				div.form-group
+					input.form-control( name="email", type="email", placeholder="E-Mail", required )
+					br
+					br
+				div.form-group
+					input.form-control( name="phone", type="phone", placeholder="Phone", required )
+					br
+					br
+				button( class=["btn btn-primary"], type="submit", value="login" ) Sign Up
+				br
+				br
+			div.card-footer.text-muted By signing up you agree to the
+			a.caps( href="/tos" ) Terms of Service
