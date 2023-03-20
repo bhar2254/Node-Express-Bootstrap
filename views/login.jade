@@ -5,13 +5,13 @@ block content
 		form( action="//pets.blaineharper.com/login", method="post" )
 			div.card-body( style="margin:auto;" )
 				div.form-group
-					label( for="username" ) Username
-					input( name="username", type="text", placeholder="Username", required )
+					label.form-check-input( for="username" ) Username
+					input.form-control( name="username", type="text", placeholder="Username", required )
 					br
 					br
 				div.form-group
-					label( for="password" ) Password
-					input( name="password", type="password", placeholder="Password", required )
+					label.form-check-input( for="password" ) Password
+					input.form-control( name="password", type="password", placeholder="Password", required )
 					br
 					br
 				button( class=["btn btn-primary"], type="submit", value="login" ) Login
