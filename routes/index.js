@@ -59,35 +59,29 @@ router.get('/signup', function(req, res, next) {
 
 // User signup api 
 router.post('/signup', (req, res, next) => { 
+	// Insert Login Code Here
+	let username = req.body.username;
+	let password = req.body.password;
+	let email = req.body.email;
+	let phone = req.body.phone;
 
-
-// Creating empty user object 
-    let newUser = new User(); 
-
-    // Initialize newUser object with request data 
-    newUser.name = req.body.name, 
-
-    newUser.email = req.body.email,
-
-
-    newUser.password=req.body.password
-
-                    // Call setPassword function to hash password 
-                    newUser.setPassword(req.body.password); 
-
-    // Save newUser object to database 
-    newUser.save((err, User) => { 
-        if (err) { 
-            return res.status(400).send({ 
-                message : "Failed to add user."
-            }); 
-        } 
-        else { 
-            return res.status(201).send({ 
-                message : "User added successfully."
-            }); 
-        } 
-    }); 
+	if (username && password) {
+		// Execute SQL query that'll select the account from the database based on the specified username and password
+		DATABASE.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
+			// If there is an issue with the query, output the error
+			if (error) throw error;
+			// If the account exists
+			if (results.length > 0) {
+				res.send('Account Already Exists!');
+			} else {
+				DATABASE.query('INSERT INTO users VALUES (?,?,?,?)', [username, password, email, phone], function(error, results, fields) {
+			}			
+			res.end();
+		});
+	} else {
+		res.send('Please enter Username and Password!');
+		res.end();
+	}
 }); 
 
 

@@ -11,6 +11,7 @@ CREATE TABLE users (
 	givenName varchar(255),
 	surname varchar(255),
 	mail varchar(255),
+	phone varchar(255),
 	createdDateTime varchar(255),
 	userType varchar(255),
 	update_time varchar(255),
