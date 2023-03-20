@@ -3,6 +3,7 @@ require('./bin/js/env');
 
 var createError = require('http-errors');
 var express = require('express');
+var expressSession = require('express-session');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
