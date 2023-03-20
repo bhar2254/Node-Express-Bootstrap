@@ -1,5 +1,6 @@
 // Importing modules 
 const mongoose = require('mongoose'); 
+var mysql = require('mysql');
 var crypto = require('crypto'); 
   
 // Creating user schema 
