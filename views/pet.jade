@@ -13,14 +13,19 @@ block content
 				div.btn-group
 					button.btn.btn-primary.dropdown-toggle( type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false' ) Animation
 					div.dropdown-menu
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','angry','"+age+"', '"+name+"');changeStatus('#petPNG', 'danger');") Angry
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','badly_behaved','"+age+"', '"+name+"');changeStatus('#petPNG', 'warning');") Badly Behaved
 						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','bath','"+age+"', '"+name+"');changeStatus('#petPNG', 'primary');") Bath
 						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','eating','"+age+"', '"+name+"');changeStatus('#petPNG', 'success');") Eating
 						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','general','"+age+"', '"+name+"');changeStatus('#petPNG', 'secondary');") General
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','happy','"+age+"', '"+name+"');changeStatus('#petPNG', 'primary');") Happy
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','horrible_food','"+age+"', '"+name+"');changeStatus('#petPNG', 'danger');") Horrible Food
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','jumping','"+age+"', '"+name+"');changeStatus('#petPNG', 'warning');") Jumping
 						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','running','"+age+"', '"+name+"');changeStatus('#petPNG', 'warning');") Running
 						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','sitting','"+age+"', '"+name+"');changeStatus('#petPNG', 'secondary');") Sitting
 						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','sleeping','"+age+"', '"+name+"');changeStatus('#petPNG', 'dark');") Sleeping
-						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','surprise_good','"+age+"', '"+name+"');changeStatus('#petPNG', 'success');") Surprised (Good)
 						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','surprise_bad','"+age+"', '"+name+"');changeStatus('#petPNG', 'danger');") Surprised (Bad)
+						a( class=["dropdown-item"], href= '#', onclick="changeMood('#petPNG','surprise_good','"+age+"', '"+name+"');changeStatus('#petPNG', 'success');") Surprised (Good)
 				br
 				br
 				p.card-text Change the status field around the Tamagotchi
