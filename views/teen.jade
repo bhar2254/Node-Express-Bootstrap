@@ -9,6 +9,8 @@ block content
 			span.caps #{title} 
 			span head to 
 			+goto_pet_button("/pet?name="+title+"&age=teen")
+		h1.caps Dynamic
+		hr
 		+row_container
 			div.col
 				+card("Angry","","/res/sprites/teen/" + title + "/dynamic/angry.png")
@@ -36,6 +38,9 @@ block content
 				+card("Surprise Good","","/res/sprites/teen/" + title + "/dynamic/surprise_good.png")
 			div.col
 				+card("Surprise Bad","","/res/sprites/teen/" + title + "/dynamic/surprise_bad.png")
+		h1.caps Static
+		hr
+		+row_container
 			div.col
 				+card("Happy","","/res/sprites/teen/" + title + "/static/happy.png")
 			div.col
