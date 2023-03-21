@@ -9,6 +9,9 @@ block content
 			span.caps #{title} 
 			span head to 
 			+goto_pet_button("/pet?name="+title+"&age=adult")
+		br
+		h1.caps Dynamic
+		hr
 		+row_container
 			div.col
 				+card("Angry","","/res/sprites/adult/" + title + "/dynamic/angry.png")
@@ -70,6 +73,10 @@ block content
 				+card("Wig","","/res/sprites/adult/" + title + "/dynamic/wig.png")
 			div.col
 				+card("Wings","","/res/sprites/adult/" + title + "/dynamic/wings.png")
+		br
+		h1.caps Static
+		hr
+		+row_container
 			div.col
 				+card("Begging","","/res/sprites/adult/" + title + "/static/begging.png")
 			div.col
