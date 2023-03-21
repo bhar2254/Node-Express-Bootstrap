@@ -34,6 +34,8 @@ CREATE TABLE pet_stats (
 	fav_food int,
 	dis_food int,
 	gender int,
+	wakeup int,
+	bedtime int,
 	evo_cond JSON,
 	animations JSON,
 	PRIMARY KEY (id)
