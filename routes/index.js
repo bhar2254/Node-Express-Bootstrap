@@ -6,16 +6,9 @@ router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Petify' });
 });
 
-router.get('/home', function(request, response) {
+router.get('/profile', isAuthenticated, function(request, response) {
 	// If the user is loggedin
-	if (req.session.loggedin) {
-		// Output username
-		res.send('Welcome back, ' + req.session.username + '!');
-	} else {
-		// Not logged in
-		res.send('Please login to view this page!');
-	}
-	res.end();
+	res.render('profile', { title: 'Profile', username: req.session.username });
 });
 
 /* GET login page. */
@@ -24,7 +17,7 @@ router.get('/login', function(req, res, next) {
 });
 
 /* POST home page. */
-router.post('/login', function(req, res, next) {
+router.post('/login',  passport.authenticate('local', { failureRedirect: '/login' }), function(req, res, next) {
 	// Insert Login Code Here
 	let username = req.body.username;
 	let password = req.body.password;
@@ -37,7 +30,7 @@ router.post('/login', function(req, res, next) {
 			// If the account exists
 			if (results.length > 0) {
 				// Redirect to home page
-				res.redirect('/home');
+				res.redirect('/profile');
 			} else {
 				res.send('Incorrect Username and/or Password!');
 			}			
@@ -88,5 +81,11 @@ router.post('/signup', (req, res, next) => {
 	}
 }); 
 
+// To destroy the session we use this endpoint
+router.get('/logout', (req, res) => {
+  req.logout();
+  req.session.destroy();
+  res.redirect(process.env.BASEURL);
+});
 
 module.exports = router;
