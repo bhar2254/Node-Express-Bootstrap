@@ -32,7 +32,7 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(sess({
+app.use(session({
     name: 'PETSESSION',
     secret: 'thisissecret',
     resave: true,
