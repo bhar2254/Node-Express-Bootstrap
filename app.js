@@ -11,7 +11,6 @@ var logger = require('morgan');
 var mysql = require('mysql');
 var passport = require('passport');
 var LocalStrategy     = require('passport-local').Strategy;
-var BetterMemoryStore = require(__dirname + '/memory');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -33,7 +32,6 @@ app.use(cookieParser());
 app.use(sess({
     name: 'PETSESSION',
     secret: 'thisissecret',
-    store:  store,
     resave: true,
     saveUninitialized: true
 }));
