@@ -17,7 +17,7 @@ router.get('/login', function(req, res, next) {
 });
 
 /* POST home page. */
-router.post('/login',  passport.authenticate('local', { failureRedirect: '/login' }), function(req, res, next) {
+router.post('/login', function(req, res, next) {
 	// Insert Login Code Here
 	let username = req.body.username;
 	let password = req.body.password;
