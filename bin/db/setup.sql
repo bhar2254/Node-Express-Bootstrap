@@ -45,5 +45,21 @@ DROP TABLE IF EXISTS `user_pets`;
 CREATE TABLE user_pets (
 	id int,
 	owner_id int,
+	pet_id int,
+	name varchar(255),
+	description varchar(255),
+	hp int,
+	weight int,
+	height int,
+	hunger int,
+	thirst int,
+	exhaust int,
+	fav_food int,
+	dis_food int,
+	gender int,
+	wakeup int,
+	bedtime int,
+	evo_cond JSON,
+	animations JSON,
 	PRIMARY KEY (id)
 );
