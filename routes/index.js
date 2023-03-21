@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Petify' });
 });
 
-router.get('/profile', isAuthenticated, function(request, response) {
+router.get('/profile', passport.isAuthenticated(), function(request, response) {
 	// If the user is loggedin
 	res.render('profile', { title: 'Profile', username: req.session.username });
 });
