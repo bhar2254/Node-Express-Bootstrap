@@ -10,7 +10,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mysql = require('mysql');
 var passport = require('passport');
-var LocalStrategy     = require('passport-local').Strategy;
+var LocalStrategy = require('passport-local').Strategy;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -29,15 +29,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(sess({
     name: 'PETSESSION',
     secret: 'thisissecret',
     resave: true,
     saveUninitialized: true
 }));
-
-app.use(passport.initialize());
-app.use(passport.session());
 
 passport.use(new LocalStrategy(
 	function(username, password, done) {
