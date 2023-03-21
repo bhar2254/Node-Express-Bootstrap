@@ -29,27 +29,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(passport.initialize());
-app.use(passport.session());
-
-app.use(session({
-    name: 'PETSESSION',
-    secret: 'thisissecret',
-    resave: true,
-    saveUninitialized: true
-}));
-
-passport.use(new LocalStrategy(
-	function(username, password, done) {
-		User.findOne({ username: username }, function (err, user) {
-			if (err) { return done(err); }
-			if (!user) { return done(null, false); }
-			if (!user.verifyPassword(password)) { return done(null, false); }
-			return done(null, user);
-		});
-	}
-));
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '/node_modules/bootstrap/dist')));
 
