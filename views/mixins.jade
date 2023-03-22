@@ -1,7 +1,7 @@
 //- Navbar mixins
 
 mixin nav(name, id)
-	nav( class=["navbar", "fixed-top", "navbar-expand-lg", "navbar-dark", "bd-navbar", "rounded-bottom"] )
+	nav( class=["navbar", "fixed-top", "navbar-expand-lg", "navbar-dark", "bd-navbar", "rounded-0"] )
 		div( style="margin:auto;" )
 			button.navbar-toggler( type="button", data-bs-toggle="collapse", data-bs-target="#" + id, aria-expanded="false", aria-controls=id, aria-label="Toggle navigation")
 					span.navbar-toggler-icon
@@ -13,7 +13,7 @@ mixin nav_item(href, active)
 		a( class=["nav-link", active], href=href )
 			block
 mixin nav_item_dropdown(href, active)
-	li(class=["dropdown", "nav-item", active], style="margin:auto;margin-left:1em;" )
+	li(class=["dropdown", "nav-item", active], style="margin:auto 1em;" )
 		a.dropdown-toggle(class="dropdown-item", href=href, data-bs-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
 			span.caret
 		ul.dropdown-menu( role="menu")
@@ -69,6 +69,6 @@ mixin footer
 		ul.nav.justify-content-center.border-bottom.pb-3.mb-3
 			li.nav-item
 				a.nav-link.px-2.footer-text.caps #{title}
-		p.text-center.footer-text Blaine Harper © 2022 Company, Inc
+		p.text-center.footer-text 2023 © Phi Lambda Phi National Fraternity 
 		
 //-
