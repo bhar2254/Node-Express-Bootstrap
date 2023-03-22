@@ -28,6 +28,18 @@ mixin nav_header
 
 //- Page mixins
 
+mixin sidebar(name, id)
+	div( class=["d-flex", "flex-column","flex-shrink-0","p-3","text-white","bg-dark"], style="width: 280px;" )
+		a( href="/", class=["d-flex","align-items-center","mb-3","mb-md-0","me-md-auto","text-white","text-decoration-none"] )
+			span.fs-4= title
+	hr
+	ul.nav.nav-pills.flex-column.mb-auto 
+		block
+		
+mixin sidebar_item(href, active)
+	li.nav-item
+		a.nav-link( class=active, href=href )
+  
 mixin card(title, text, src)
 	div.card( style="width:18rem; text-align:center; " )
 		img( onerror="this.onerror=null; this.src='/res/sprites/base/low_battery.png'", src= src, class="card-img-top pixel rounded-0 border border-primary", style="max-width:10em;max-height:10em;margin:auto;margin-top:2.5em;background-color:#ababab;" )
