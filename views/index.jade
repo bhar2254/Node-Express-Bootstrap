@@ -1,61 +1,64 @@
 extends layout  
   
 block content  
-	div.container-fluid( style="text-align:center;" )  
-		h1= title  
-		p Welcome to 
-			span.caps #{title}  
-		div.container( style="text-align:left;" )
-			br
-			h3 Babies
-			hr
-			br
-			+row_container
-				div.col  
-					+card_link("Petitchi","Baby","Sprites","/pet/baby/petitchi","/res/sprites/baby/petitchi/dynamic/sleeping.png")
-						a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=petitchi&age=baby" ) Pet
-				div.col  
-					+card_link("Shiropetitchi","Baby","Sprites","/pet/baby/shiropetitchi","/res/sprites/baby/shiropetitchi/dynamic/sleeping.png") 
-						a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=shiropetitchi&age=baby" ) Pet
+	div.container( id='main' )
+		+sidebar("Petify","dropdown_menu")  
+			+sidebar_item( "/", "active" ) Home  
+		div.container-fluid( style="text-align:center;" )  
+			h1= title  
+			p Welcome to 
+				span.caps #{title}  
+			div.container( style="text-align:left;" )
 				br
-				h3 Children
+				h3 Babies
 				hr
 				br
-			+row_container   
-				div.col 
-					+card_link("Kinakomotchi","Child","Sprites","/pet/child/kinakomotchi","/res/sprites/child/marutchi/dynamic/rolling.png")  
-						a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=kinakomotchi&age=child" ) Pet
-				div.col 
-					+card_link("Hitodetchi","Child","Sprites","/pet/child/hitodetchi","/res/sprites/child/hitodetchi/dynamic/surprise_bad.png")
-						a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=hitodetchi&age=child" ) Pet  
-				div.col  
-					+card_link("Kuribotchi","Child","Sprites","/pet/child/kuribotchi","/res/sprites/child/kuribotchi/dynamic/eating.png")  
-						a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=kuribotchi&age=child" ) Pet
-				div.col 
-					+card_link("Marutchi","Child","Sprites","/pet/child/marutchi","/res/sprites/child/marutchi/dynamic/running.png")  
-						a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=marutchi&age=child" ) Pet
-				br
-				h3 Teens
-				hr
-				br
-			+row_container   
-				div.col  
-					+card_link("Hinotamatchi","Teen","Sprites","/pet/teen/hinotamatchi","/res/sprites/teen/hinotamatchi/dynamic/bath.png")  
-						a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=hinotamatchi&age=teen" ) Pet
-				div.col  
-					+card_link("Young Mametchi","Teen","Sprites","/pet/teen/mametchi","/res/sprites/teen/mametchi/dynamic/surprise_good.png")  
-						a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=mametchi&age=teen" ) Pet
-				div.col  
-					+card_link("Oniontchi","Teen","Sprites","/pet/teen/oniontchi","/res/sprites/teen/oniontchi/dynamic/badly_behaved.png")  
-						a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=oniontchi&age=teen" ) Pet
-				div.col  
-					+card_link("Ufotchi","Teen","Sprites","/pet/teen/ufotchi","/res/sprites/teen/ufotchi/dynamic/jumping.png")  
-						a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=ufotchi&age=teen" ) Pet
-				br
-				h3 Adults
-				hr
-				br
-			+row_container   
-				div.col  
-					+card_link("Mametchi","Adult","Sprites","/pet/adult/mametchi","/res/sprites/adult/mametchi/dynamic/skateboarding.png")  
-						a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=mametchi&age=adult" ) Pet
+				+row_container
+					div.col  
+						+card_link("Petitchi","Baby","Sprites","/pet/baby/petitchi","/res/sprites/baby/petitchi/dynamic/sleeping.png")
+							a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=petitchi&age=baby" ) Pet
+					div.col  
+						+card_link("Shiropetitchi","Baby","Sprites","/pet/baby/shiropetitchi","/res/sprites/baby/shiropetitchi/dynamic/sleeping.png") 
+							a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=shiropetitchi&age=baby" ) Pet
+					br
+					h3 Children
+					hr
+					br
+				+row_container   
+					div.col 
+						+card_link("Kinakomotchi","Child","Sprites","/pet/child/kinakomotchi","/res/sprites/child/marutchi/dynamic/rolling.png")  
+							a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=kinakomotchi&age=child" ) Pet
+					div.col 
+						+card_link("Hitodetchi","Child","Sprites","/pet/child/hitodetchi","/res/sprites/child/hitodetchi/dynamic/surprise_bad.png")
+							a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=hitodetchi&age=child" ) Pet  
+					div.col  
+						+card_link("Kuribotchi","Child","Sprites","/pet/child/kuribotchi","/res/sprites/child/kuribotchi/dynamic/eating.png")  
+							a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=kuribotchi&age=child" ) Pet
+					div.col 
+						+card_link("Marutchi","Child","Sprites","/pet/child/marutchi","/res/sprites/child/marutchi/dynamic/running.png")  
+							a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=marutchi&age=child" ) Pet
+					br
+					h3 Teens
+					hr
+					br
+				+row_container   
+					div.col  
+						+card_link("Hinotamatchi","Teen","Sprites","/pet/teen/hinotamatchi","/res/sprites/teen/hinotamatchi/dynamic/bath.png")  
+							a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=hinotamatchi&age=teen" ) Pet
+					div.col  
+						+card_link("Young Mametchi","Teen","Sprites","/pet/teen/mametchi","/res/sprites/teen/mametchi/dynamic/surprise_good.png")  
+							a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=mametchi&age=teen" ) Pet
+					div.col  
+						+card_link("Oniontchi","Teen","Sprites","/pet/teen/oniontchi","/res/sprites/teen/oniontchi/dynamic/badly_behaved.png")  
+							a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=oniontchi&age=teen" ) Pet
+					div.col  
+						+card_link("Ufotchi","Teen","Sprites","/pet/teen/ufotchi","/res/sprites/teen/ufotchi/dynamic/jumping.png")  
+							a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=ufotchi&age=teen" ) Pet
+					br
+					h3 Adults
+					hr
+					br
+				+row_container   
+					div.col  
+						+card_link("Mametchi","Adult","Sprites","/pet/adult/mametchi","/res/sprites/adult/mametchi/dynamic/skateboarding.png")  
+							a( class=["btn","btn-success","caps"], style="margin-left:1em;", href="/pet?name=mametchi&age=adult" ) Pet
