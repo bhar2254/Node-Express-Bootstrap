@@ -1,7 +1,7 @@
 //- Navbar mixins
 
 mixin nav(name, id)
-	nav( class=["navbar", "fixed-top", "navbar-expand-lg", "navbar-dark", "bd-navbar", "rounded-0"] )
+	nav( class=["navbar", "fixed-top", "navbar-expand-lg", "navbar-dark", "bd-navbar", "rounded-bottom"] )
 		div( style="margin:auto;" )
 			button.navbar-toggler( type="button", data-bs-toggle="collapse", data-bs-target="#" + id, aria-expanded="false", aria-controls=id, aria-label="Toggle navigation")
 					span.navbar-toggler-icon
@@ -13,7 +13,7 @@ mixin nav_item(href, active)
 		a( class=["nav-link", active], href=href )
 			block
 mixin nav_item_dropdown(href, active)
-	li(class=["dropdown", "nav-item", active], style="margin:auto 1em;" )
+	li(class=["dropdown", "nav-item", active], style="margin:auto;margin-left:1em;" )
 		a.dropdown-toggle(class="dropdown-item", href=href, data-bs-toggle="dropdown", role="button", aria-expanded="false" )= attributes.label
 			span.caret
 		ul.dropdown-menu( role="menu")
@@ -29,13 +29,17 @@ mixin nav_header
 //- Page mixins
 
 mixin sidebar(name, id)
-	div( class=["d-flex", "flex-column","flex-shrink-0","p-3","text-white","bg-dark"], style="width: 280px;" )
+	div( class=["d-flex","flex-column","flex-shrink-0","p-3","text-white","bg-dark"], style="width: 280px;" )
 		a( href="/", class=["d-flex","align-items-center","mb-3","mb-md-0","me-md-auto","text-white","text-decoration-none"] )
 			span.fs-4= title
 		hr
 		ul.nav.nav-pills.flex-column.mb-auto 
 			block
 		hr
+
+mixin sidebar_divider
+	div( style="flex-shrink: 0;width: 1.5rem; height: 100vh; background-color: rgba(0, 0, 0, .1); border: solid rgba(0, 0, 0, .15); border-width: 1px 0; box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, .1), inset 0 0.125em 0.5em rgba(0, 0, 0, .15);" )
+		block
   
 mixin card(title, text, src)
 	div.card( style="width:18rem; text-align:center; " )
@@ -69,6 +73,6 @@ mixin footer
 		ul.nav.justify-content-center.border-bottom.pb-3.mb-3
 			li.nav-item
 				a.nav-link.px-2.footer-text.caps #{title}
-		p.text-center.footer-text 2023 © Phi Lambda Phi National Fraternity 
+		p.text-center.footer-text Blaine Harper © 2023 blaineharper.com
 		
 //-
