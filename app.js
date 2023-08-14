@@ -1,22 +1,19 @@
 
-require('./bin/js/env');
-
-var createError = require('http-errors');
-var express = require('express');
-var session = require('express-session');
-var Store = require('express-session').Store;
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var mysql = require('mysql');
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+const createError = require('http-errors');
+const express = require('express');
+const session = require('express-session');
+const Store = require('express-session').Store;
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const mysql = require('mysql');
+const dotenv = require('dotenv');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var petRouter = require('./routes/pet');
 
-global.DATABASE = 	require('./bin/js/sql_connect');
+//	DB = require('./bin/js/sql_connect');
 
 var app = express();
 
@@ -39,15 +36,6 @@ app.use('/users', usersRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
 	next(createError(404));
-});
-
-passport.serializeUser(function(user, done){
-    done(null, user.id);
-});
-passport.deserializeUser(function(id, done){
-    DATABASE.query("select * from users where id = "+ id, function (err, rows){
-        done(err, rows[0]);
-    });
 });
 
 // error handler
