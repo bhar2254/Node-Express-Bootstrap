@@ -2,64 +2,71 @@ DROP DATABASE IF EXISTS `pets`;
 CREATE DATABASE IF NOT EXISTS `pets`;
 USE pets;
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE users (
-	id int NOT NULL AUTO_INCREMENT,
-	username varchar(255),
-	password varchar(255),
-	displayName varchar(255),
-	givenName varchar(255),
-	surname varchar(255),
-	mail varchar(255),
-	phone varchar(255),
-	createdDateTime varchar(255),
-	userType varchar(255),
-	update_time varchar(255),
-	update_id int,
-	update_displayName varchar(255),
-	PRIMARY KEY (id, mail)
+DROP TABLE IF EXISTS `tblUser`;
+CREATE TABLE tblUser (
+	intId int NOT NULL AUTO_INCREMENT,
+	txtDisplayName text,
+	txtPass text,
+	txtGivenName text,
+	txtSurname text,
+	txtMail text,
+	txtPhone text,
+	dtCreateTime text,
+	txtUpdateTime text,
+	intUpdateId int,
+	txtUpdateName text,
+	PRIMARY KEY (intId)
 );
 
-DROP TABLE IF EXISTS `pet_stats`;
-CREATE TABLE pet_stats (
-	id int,
-	name varchar(255),
-	description varchar(255),
-	hp int,
-	weight int,
-	height int,
-	hunger int,
-	thirst int,
-	exhaust int,
-	fav_food int,
-	dis_food int,
-	gender int,
-	wakeup int,
-	bedtime int,
-	evo_cond JSON,
-	animations JSON,
-	PRIMARY KEY (id)
+DROP TABLE IF EXISTS `tblBasePet`;
+CREATE TABLE tblBasePet (
+	intId int,
+	txtName text,
+	txtDesc text,
+	intBaseHp int,
+	intBaseHeight int,
+	intBaseHunger int,
+	intBaseThirst int,
+	intBaseExhaust int,
+	intFav_food text,
+	intDis_food text,
+	intGender int,
+	intWakeup int,
+	intBedtime int,
+	jsonEvolCond text,
+	jsonAvailAnim text,
+	PRIMARY KEY (intId)
 );
 
-DROP TABLE IF EXISTS `user_pets`;
-CREATE TABLE user_pets (
-	id int,
-	owner_id int,
-	pet_id int,
-	name varchar(255),
-	description varchar(255),
-	hp int,
-	weight int,
-	height int,
-	hunger int,
-	thirst int,
-	exhaust int,
-	fav_food int,
-	dis_food int,
-	gender int,
-	wakeup int,
-	bedtime int,
-	evo_cond JSON,
-	animations JSON,
-	PRIMARY KEY (id)
+DROP TABLE IF EXISTS `tblPet`;
+CREATE TABLE tblPet (
+	intId int,
+	intOwner_id int,
+	intPet_id int,
+	txtName text,
+	intHp int,
+	txtMood text,
+	intHeight int,
+	intWeight int,
+	intHunger int,
+	intThirst int,
+	intExhaust int,
+	PRIMARY KEY (intId)
+);
+
+DROP TABLE IF EXISTS `tblItem`;
+CREATE TABLE tblItem (
+	intId int,
+	txtName text,
+	jsonProp text,
+	PRIMARY KEY (intId)
+);
+
+
+DROP TABLE IF EXISTS `tblInventory`;
+CREATE TABLE tblInventory (
+	intId int,
+	intItemId int,
+	intQty int,
+	PRIMARY KEY (intId)
 );
